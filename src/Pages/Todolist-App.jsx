@@ -1,6 +1,7 @@
 //Import Components
-import ListTodoList from "../Components/List-TodoList";
-import NoteTodoList from "../Components/Note-Todolist";
+import ListTodoList from "../Components/List-TodoList.jsx";
+import NoteTodoList from "../Components/Note-Todolist.jsx";
+
 
 export default function Todolist_App() {
     return <>
