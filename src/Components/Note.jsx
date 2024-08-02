@@ -1,4 +1,4 @@
-export default function NoteTodoList() {
+export default function Note() {
     return <>
         <div className="w-full lg:w-[70%] h-full px-3 lg:px-7 lg:pt-7 flex justify-center items-center">
             <div className="w-full lg:w-[90%] h-full flex flex-wrap gap-5 lg:gap-0">

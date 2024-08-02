@@ -1,7 +1,7 @@
 import Home_Logo from '../Assets/home-logo.png';
 import Personnel_Logo from '../Assets/personnel.png';
 import Work_Logo from '../Assets/work.png'
-export default function ListTodoList() {
+export default function TodoList() {
     return <>
         <div className="w-full lg:w-[25%] h-full p-5 pl-6 pt-7 shadow-xl lg:rounded-xl bg-white">
             <div className="w-full flex flex-wrap gap-5">

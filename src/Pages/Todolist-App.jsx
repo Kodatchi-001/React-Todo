@@ -1,13 +1,13 @@
 //Import Components
-import ListTodoList from "../Components/List-TodoList.jsx";
-import NoteTodoList from "../Components/Note-Todolist.jsx";
+import TodoList from "../Components/TodoList.jsx";
+import Note from "../Components/Note.jsx";
 
 
 export default function Todolist_App() {
     return <>
         <section className="w-full lg:h-screen flex justify-around items-center flex-wrap lg:p-9 gap-3 bg-gray-200">
-            <ListTodoList/>
-            <NoteTodoList/>
+            <TodoList/>
+            <Note/>
         </section>
     </>
 }
