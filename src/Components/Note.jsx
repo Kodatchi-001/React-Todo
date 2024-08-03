@@ -1,3 +1,4 @@
+import { displayDate } from "../Utils/Date"
 export default function Note() {
     return <>
         <div className="w-full lg:w-[70%] h-full px-3 lg:px-7 lg:pt-7 flex justify-center items-center">
@@ -5,7 +6,8 @@ export default function Note() {
                 <div className="w-full h-[15%] flex justify-between">
                     <div className="w-4/5 h-4/6 flex justify-center flex-col gap-1">
                         <h1 className="text-3xl font-bold">Good Morning, Sullivan!</h1>
-                        <h1 className="text-xl text-gray-500">Today, Friday 8 August 2024</h1>
+                        {/* <h1 className="text-xl text-gray-500">Today, Friday 8 August 2024</h1> */}
+                        <h1 className="text-xl text-gray-500">{displayDate()}</h1>
                     </div>
                 </div>
                 <div className="w-full h-[73%] flex flex-col mt-auto gap-3">
