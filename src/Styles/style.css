@@ -15,3 +15,14 @@
     opacity: 1;
     visibility: visible;
 }
+
+.Action{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.Action-show{
+    width: 50%;
+}
