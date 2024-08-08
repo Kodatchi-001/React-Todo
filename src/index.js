@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//Import Styles
 import './index.css';
-import '../src/Styles/style.css'
-import reportWebVitals from './reportWebVitals';
-import '../src/Utils/Date'
+import '../src/Styles/style.css';
+//Import Funcion Date
+import '../src/Utils/Date';
 //Import Page
 import Todolist_App from './Pages/Todolist-App';
 
@@ -14,4 +15,3 @@ root.render(
   </React.StrictMode>
 );
 
-reportWebVitals();

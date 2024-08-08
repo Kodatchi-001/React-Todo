@@ -13,13 +13,13 @@ export function Create_Note() {
 
     if (Card_Create.classList.contains('Card-Create-Show')) {
         if (input.trim() == '' || !selectElement.querySelector('i') || input_textarea.trim() == '') {
-            alert('Create your Task');
             Card_Create.classList.remove('Card-Create-Show');
-        } else {
-        const div = document.createElement('div');
-        div.className = "w-full h-[7vh] pl-3 pr-2 py-2 flex items-center flex-wrap rounded-lg gap-5 overflow-hidden cursor-pointer bg-white";
-        div.innerHTML =
-            `
+        }
+        else {
+            const div = document.createElement('div');
+            div.className = "w-full h-[7vh] pl-3 pr-2 py-2 flex items-center flex-wrap rounded-lg gap-5 overflow-hidden cursor-pointer bg-white";
+            div.innerHTML =
+                `
                     <div class="w-full h-full flex items-center gap-3">
                         <div class='w-[20%] h-full flex items-center gap-2'>
                             <div class="p-2 rounded-md border cursor-pointer border-gray-400"></div>
@@ -38,54 +38,47 @@ export function Create_Note() {
                     <div class="w-full h-full flex pl-8"><p class="text-md">${input_textarea}</p></div>
                 `;
 
-        document.querySelector('.Tasks').appendChild(div);
-        document.querySelector('.input_task').value = "";
-        document.querySelector('textarea').value = "";
+            document.querySelector('.Tasks').appendChild(div);
+            document.querySelector('.input_task').value = "";
+            document.querySelector('textarea').value = "";
 
-        //Funtion Show information Note
-        const information = div.querySelector('.Note_information');
-        information.addEventListener('click', e => Note_information(e));
+            //Funtion Show information Note
+            const information = div.querySelector('.Note_information');
+            information.addEventListener('click', e => Note_information(e));
 
-        //Funtion Show Buttons Note
-        const Button_Action = div.querySelector('.Button-Action');
-        const Action = div.querySelector('.Action');
-        Button_Action.addEventListener('click', () => Action.classList.toggle('Action-show'))
+            //Funtion Show Buttons Note
+            const Button_Action = div.querySelector('.Button-Action');
+            const Action = div.querySelector('.Action');
+            Button_Action.addEventListener('click', () => Action.classList.toggle('Action-show'))
 
-        //Funtion Suprimme Task
-        const Suprimmer = div.querySelector('.text-red-500');
-        Suprimmer.addEventListener('click', () => div.remove())
+            //Funtion Suprimme Task
+            const Suprimmer = div.querySelector('.text-red-500');
+            Suprimmer.addEventListener('click', () => div.remove())
 
-        // Function Modify Task
-        const Modifier = div.querySelector('.text-green-500');
-        Modifier.addEventListener('click', () => {
-            document.querySelector('.input_task').value = div.querySelector('h1').textContent;
-            document.querySelector('textarea').value = div.querySelector('p').textContent;
-            document.querySelector('.Button-name').textContent = 'Modifier';
-            Card_Create.classList.add('Card-Create-Show');
+            // Function Modify Task
+            const Modifier = div.querySelector('.text-green-500');
+            Modifier.addEventListener('click', () => {
+                document.querySelector('.input_task').value = div.querySelector('h1').textContent;
+                document.querySelector('textarea').value = div.querySelector('p').textContent;
+                document.querySelector('.Button-name').textContent = 'Modifier';
+                Card_Create.classList.add('Card-Create-Show');
+                document.querySelector('.Create-Note').removeEventListener('click', Create_Note);
+                document.querySelector('.Create-Note').addEventListener('click', Update);
 
-            document.querySelector('.Create-Note').removeEventListener('click', Create_Note);
-            document.querySelector('.Create-Note').addEventListener('click', Update);
-
-            function Update() {
-                // Update the existing card with new information
-                div.querySelector('h1').textContent = document.querySelector('.input_task').value;
-                div.querySelector('p').textContent = document.querySelector('textarea').value;
-
-                // Reset button to original state
-                document.querySelector('.Button-name').textContent = 'Create new task';
-
-                document.querySelector('.Create-Note').removeEventListener('click',Update);
-
-                Card_Create.classList.remove('Card-Create-Show');
-                document.querySelector('.input_task').value = "";
-                document.querySelector('textarea').value = "";
-
-            }
-        });
-
-        Card_Create.classList.remove('Card-Create-Show');
+                function Update() {
+                    div.querySelector('h1').textContent = document.querySelector('.input_task').value;
+                    div.querySelector('p').textContent = document.querySelector('textarea').value;
+                    document.querySelector('.Button-name').textContent = 'Create new task';
+                    document.querySelector('.Create-Note').removeEventListener('click', Update);
+                    Card_Create.classList.remove('Card-Create-Show');
+                    document.querySelector('.input_task').value = "";
+                    document.querySelector('textarea').value = "";
+                }
+            });
+            Card_Create.classList.remove('Card-Create-Show');
         }
-    } else {
+    } 
+    else {
         Card_Create.classList.add('Card-Create-Show');
     }
 }

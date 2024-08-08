@@ -38,15 +38,8 @@ export default function Note() {
 
                             </div>
                             <div className="w-[20%] h-full flex justify-end items-center ml-auto gap-3">
-                                <h1>List</h1>
                                 <i class='bx bx-dots-vertical text-2xl cursor-pointer rounded-md bg-gray-200'></i>
                             </div>
-                        </div>
-                        <div className="w-full h-full flex pl-8">
-                            <p className="text-sm">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
-                                animi numquam impedit laudantium.
-                            </p>
                         </div>
                     </div>
                 </div>
