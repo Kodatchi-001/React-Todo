@@ -3,16 +3,14 @@ import { useState } from "react";
 export default function Cards_Tasks() {
     const [input_value, setinput_value] = useState('');
     const [Edit_index, setEdit_index] = useState(null);
-
     const [Liste_Tasks, setListe_Tasks] = useState([]);
     const [Liste_Task_checked, setListe_Task_checked] = useState([]);
-
     const [viewChecked, setViewChecked] = useState(false);
 
-    // Prendre valeur de input
+    // Updates the input value state
     const Handel_Name = e => setinput_value(e.target.value);
 
-    // Function Create New_Task
+    // Creates a new task or updates an existing one
     const Create_Task = () => {
         if (input_value.trim() === "") {
             return;
@@ -36,19 +34,19 @@ export default function Cards_Tasks() {
         }
     };
 
-    // Function Supprimer
+    // Deletes a task by index
     const Supprimer = index => {
         setListe_Tasks(Liste_Tasks.filter((_, i) => i !== index));
         setListe_Task_checked(Liste_Task_checked.filter(task => task.id !== index));
     };
 
-    // Function Modifier
+    // Sets the component to edit mode and populates input with the task name
     const Modifier = index => {
         setEdit_index(index);
         setinput_value(Liste_Tasks[index].Name);
     };
 
-    // Function Checked 
+    // Toggles the checked status of a task
     const Checked = index => {
         setListe_Tasks(Liste_Tasks.map((task, i) => i === index ? { ...task, Status: !task.Status } : {}));
 
