@@ -48,7 +48,7 @@ export default function Cards_Tasks() {
 
     // Toggles the checked status of a task
     const Checked = index => {
-        setListe_Tasks(Liste_Tasks.map((task, i) => i === index ? { ...task, Status: !task.Status } : {}));
+        setListe_Tasks(Liste_Tasks.map((task, i) => i === index ? { ...task, Status: !task.Status } : task));
 
         if (!Liste_Tasks[index].Status) {
             setListe_Task_checked([...Liste_Task_checked, { id: index, Name: Liste_Tasks[index].Name }]);
