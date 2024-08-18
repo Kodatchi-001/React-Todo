@@ -13,3 +13,20 @@
 .Background-blur{
     background-color: rgba(0, 0, 0, 0.326);
 }
+
+.custom-checkbox {
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #d1d5db;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox:checked {
+    background-color: black;
+    border: 2px solid black;
+}
+
+.custom-checkbox:focus {
+    outline: none;
+}
