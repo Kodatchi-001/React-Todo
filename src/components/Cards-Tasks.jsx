@@ -84,10 +84,10 @@ export default function Cards_Tasks() {
     };
 
     return (
-        <section className="w-full h-[72vh] flex justify-center p-3">
-            <div className="w-full lg:w-[58%] h-full mt-[-7vh] lg:mt-[-11.6vh] rounded-xl shadow-lg flex flex-wrap lg:p-2 px-3 lg:px-5 pb-8 bg-white">
+        <section className="w-full h-[72vh] flex justify-center px-2 py-4 lg:p-3">
+            <div className="w-full lg:w-[58%] h-full lg:mt-[-11.6vh] rounded-xl shadow-lg flex flex-wrap lg:p-2 px-3 lg:px-5 pb-8 bg-white">
                 <div className="w-full h-[15%] flex justify-between items-center">
-                    <div className="w-full h-full flex justify-between gap-3 py-[14.5px]">
+                    <div className="w-full h-full flex justify-between gap-2 lg:gap-3 py-[14.5px]">
                         <input
                             type="text"
                             className="w-full h-full rounded-lg text-lg px-5 bg-gray-200"
@@ -96,13 +96,13 @@ export default function Cards_Tasks() {
                             onChange={Handel_Name}
                         />
                         <button
-                            className="px-10 py-2 rounded-lg text-lg text-white bg-black"
+                            className="px-8 lg:px-10 py-2 rounded-lg text-lg text-white bg-black"
                             onClick={Create_Task}>
                             {Edit_index !== null ? 'Enregistrer' : 'Add'}
                         </button>
                     </div>
                 </div>
-                <div className="w-full h-[15%] gap-3 lg:gap-2 flex justify-between lg:justify-start items-center">
+                <div className="w-full h-[15%] gap-2 flex justify-between lg:justify-start items-center">
                     <h1
                         className={`lg:text-lg cursor-pointer w-1/2 lg:w-auto text-center lg:px-5 py-3 lg:py-2 rounded-lg ${!viewChecked ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
                         onClick={() => setViewChecked(false)}>

@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 export default function Todo_App() {
     return <>
-        <section className="w-full h-screen flex flex-col bg-gray-200">
+        <section className="w-full lg:h-screen flex flex-col bg-gray-200">
             <Header />
             <Cards_Tasks />
         </section>
