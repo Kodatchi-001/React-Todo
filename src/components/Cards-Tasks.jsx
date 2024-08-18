@@ -78,7 +78,7 @@ export default function Cards_Tasks() {
             </div>
         )) : (
             <div className="w-full h-full flex justify-center items-center">
-                <h1 className="text-gray-300 text-4xl">{viewChecked ? "No tasks checked" : "Let's get some work done"}</h1>
+                <h1 className="text-gray-300 text-center lg:text-start text-4xl mt-[-6vh] lg:mt-[-15vh]">{viewChecked ? "No tasks checked" : "Let's get some work done"}</h1>
             </div>
         );
     };
@@ -97,23 +97,20 @@ export default function Cards_Tasks() {
                         />
                         <button
                             className="px-10 py-2 rounded-lg text-lg text-white bg-black"
-                            onClick={Create_Task}
-                        >
+                            onClick={Create_Task}>
                             {Edit_index !== null ? 'Enregistrer' : 'Add'}
                         </button>
                     </div>
                 </div>
-                <div className="w-full h-[15%] gap-2 flex justify-between lg:justify-start items-center">
+                <div className="w-full h-[15%] gap-3 lg:gap-2 flex justify-between lg:justify-start items-center">
                     <h1
-                        className={`lg:text-lg cursor-pointer px-5 py-2 rounded-lg ${!viewChecked ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
-                        onClick={() => setViewChecked(false)}
-                    >
+                        className={`lg:text-lg cursor-pointer w-1/2 lg:w-auto text-center lg:px-5 py-3 lg:py-2 rounded-lg ${!viewChecked ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
+                        onClick={() => setViewChecked(false)}>
                         All Tasks
                     </h1>
                     <h1
-                        className={`lg:text-lg cursor-pointer px-5 py-2 rounded-lg ${viewChecked ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
-                        onClick={() => setViewChecked(true)}
-                    >
+                        className={`lg:text-lg cursor-pointer w-1/2 lg:w-auto text-center lg:px-5 py-3 lg:py-2 rounded-lg ${viewChecked ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
+                        onClick={() => setViewChecked(true)}>
                         Tasks Checked
                     </h1>
                 </div>
