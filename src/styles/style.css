@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+body {
+    background-color: rgb(229 231 235);
+}
+
 .Background-image {
     background-image: url(../assets/Background-image.jpg);
     background-size: cover;
@@ -26,6 +30,13 @@
     border: 2px solid #d1d5db;
     border-radius: 0.25rem;
     transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox-2 {
+    appearance: none;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 0.25rem;
 }
 
 .custom-checkbox:checked {
